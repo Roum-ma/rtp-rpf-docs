@@ -5,6 +5,9 @@ export default defineConfig({
   title: "RPF & RPT Docs",
   description: "Documentation for Resource Packs Fusion and Resource Packs Tools - Minecraft mods for advanced resource pack delegation and item model management",
   
+  // Base URL for GitHub Pages (replace 'rtp-rpf-docs' with your repo name if different)
+  base: '/rtp-rpf-docs/',
+  
   // Ignore dead links during build (useful while docs are still being written)
   ignoreDeadLinks: true,
   
