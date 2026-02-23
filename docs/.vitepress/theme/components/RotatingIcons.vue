@@ -40,19 +40,19 @@ const icons = ref<Icon[]>([
   { 
     src: withBase('/icon.png'), 
     alt: 'RPF Icon',
-    title: 'Go to RPF Getting Started',
+    title: 'Go to RPF Modrinth',
     link: {
-      en: '/rpf/getting-started',
-      ru: '/ru/rpf/getting-started'
+      en: 'https://modrinth.com/project/zmAOqYcS',
+      ru: 'https://modrinth.com/project/zmAOqYcS'
     }
   },
   { 
     src: withBase('/icon2.png'), 
     alt: 'RPT Icon',
-    title: 'Go to RPT Getting Started',
+    title: 'Go to RPT Modrinth',
     link: {
-      en: '/rpt/getting-started',
-      ru: '/ru/rpt/getting-started'
+      en: 'https://modrinth.com/project/kW70KuE2',
+      ru: 'https://modrinth.com/project/kW70KuE2'
     }
   }
 ])
@@ -60,7 +60,8 @@ const icons = ref<Icon[]>([
 const getIconLink = (index: number) => {
   const icon = icons.value[index]
   const currentLang = lang.value === 'ru' ? 'ru' : 'en'
-  return withBase(icon.link[currentLang])
+  // return withBase(icon.link[currentLang])
+  return icon.link[currentLang]
 }
 
 const getIconStyle = (index: number) => {

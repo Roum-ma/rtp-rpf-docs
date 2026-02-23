@@ -18,20 +18,23 @@ hero:
     - theme: alt
       text: View Examples
       link: /examples/
-
-features:
-  - icon: 🔀
-    title: Resource Packs Fusion (RPF)
-    details: Smart delegation system that allows multiple resource packs to work together seamlessly. Enables pack creators to override specific models while delegating others to lower-priority packs.
-    link: /rpf/getting-started
-    linkText: Learn more about RPF
-    
-  - icon: 🎨
-    title: Resource Packs Tweaks (RPT)
-    details: Advanced templating system, variable support, and regex-based conditional models. Create dynamic item models that respond to item data without custom model data.
-    link: /rpt/getting-started
-    linkText: Learn more about RPT
 ---
+
+<FullWidthFeatures :features="[
+  {
+    title: 'Resource Packs Fusion (RPF)',
+    details: 'Smart delegation system that allows multiple resource packs to work together seamlessly. Enables pack creators to override specific models while delegating others to lower-priority packs.',
+    link: '/rpf/getting-started',
+    linkText: 'Learn more about RPF',
+    image: '/rpf-demo.gif'
+  },
+  {
+    title: 'Resource Packs Tweaks (RPT)',
+    details: 'Advanced templating system, variable support, and regex-based conditional models. Create dynamic item models that respond to item data without custom model data.',
+    link: '/rpt/getting-started',
+    linkText: 'Learn more about RPT'
+  }
+]" />
 
 ## Why RPF & RPT?
 

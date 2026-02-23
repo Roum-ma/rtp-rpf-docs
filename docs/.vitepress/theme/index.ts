@@ -4,6 +4,7 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import RotatingIcons from './components/RotatingIcons.vue'
+import FullWidthFeatures from './components/FullWidthFeatures.vue'
 
 export default {
   extends: DefaultTheme,
@@ -14,7 +15,8 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    // Регистрируем глобальный компонент
+    // Регистрируем глобальные компоненты
     app.component('RotatingIcons', RotatingIcons)
+    app.component('FullWidthFeatures', FullWidthFeatures)
   }
 } satisfies Theme
