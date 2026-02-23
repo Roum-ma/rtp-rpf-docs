@@ -1,0 +1,81 @@
+---
+layout: home
+
+hero:
+  name: "RPF & RPT"
+  text: "Resource Pack Tools"
+  tagline: "Advanced resource pack delegation and item model management for Minecraft 1.21+"
+  image:
+    src: /icon.png
+    alt: RPF & RPT Logo
+  actions:
+    - theme: brand
+      text: Get Started with RPF
+      link: /rpf/getting-started
+    - theme: alt
+      text: Get Started with RPT
+      link: /rpt/getting-started
+    - theme: alt
+      text: View Examples
+      link: /examples/
+
+features:
+  - icon: 🔀
+    title: Resource Packs Fusion (RPF)
+    details: Smart delegation system that allows multiple resource packs to work together seamlessly. Enables pack creators to override specific models while delegating others to lower-priority packs.
+    link: /rpf/getting-started
+    linkText: Learn more about RPF
+    
+  - icon: 🎨
+    title: Resource Packs Tweaks (RPT)
+    details: Advanced templating system, variable support, and regex-based conditional models. Create dynamic item models that respond to item data without custom model data.
+    link: /rpt/getting-started
+    linkText: Learn more about RPT
+---
+
+## Why RPF & RPT?
+
+Minecraft's resource pack system loads only the top-priority pack's model for each item. This makes it difficult to combine multiple resource packs that modify different items.
+
+**RPF (Resource Packs Fusion)** solves this by introducing a delegation system - packs can selectively override models and delegate the rest to lower-priority packs.
+
+**RPT (Resource Packs Tools)** adds powerful features like templates, variables, and conditional models, making it easier to create dynamic resource packs without requiring custom model data or separate mods.
+
+## Quick Example
+
+### RPF Delegation
+```json
+{
+  "type": "rpf:select",
+  "property": "minecraft:custom_data",
+  "cases": [
+    {
+      "when": { "special_sword": true },
+      "model": { "type": "minecraft:model", "model": "item/special_sword" }
+    }
+  ],
+  "delegate": true
+}
+```
+This model will show `special_sword` for items with `special_sword` NBT tag, and delegate to the next pack for all other items.
+
+### RPT Templates
+```json
+{
+  "model": {
+    "type": "rpt:template",
+    "template": "mypack:weapon_template"
+  }
+}
+```
+Reuse complex model configurations across multiple items with the template system.
+
+## Getting Started
+
+::: tip Choose Your Path
+- **Pack Creators**: Start with [RPF Pack Developers Guide](/rpf/pack-developers) to learn delegation
+- **Advanced Pack Creators**: Add [RPT](/rpt/getting-started) for templates and variables
+- **Mod Developers**: Check the API documentation for integration
+:::
+
+

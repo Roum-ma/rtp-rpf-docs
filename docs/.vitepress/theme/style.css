@@ -1,0 +1,313 @@
+/**
+ * RPF & RPT Custom Theme
+ * Base colors: #15172B (background), #49C963 (green), #FF4F56 (red), #3EA8DB (blue)
+ */
+
+/**
+ * Colors - Base Palette
+ * -------------------------------------------------------------------------- */
+
+:root {
+  /* Custom color palette */
+  --rpf-bg: #15172B;
+  --rpf-bg-lighter: #1c1f38;
+  --rpf-bg-lighter-2: #252945;
+  --rpf-bg-soft: rgba(21, 23, 43, 0.4);
+  
+  /* Accent colors */
+  --rpf-green-1: #6ee584;
+  --rpf-green-2: #49C963;
+  --rpf-green-3: #3ba850;
+  --rpf-green-soft: rgba(73, 201, 99, 0.16);
+  
+  --rpf-red-1: #ff6b71;
+  --rpf-red-2: #FF4F56;
+  --rpf-red-3: #e53e45;
+  --rpf-red-soft: rgba(255, 79, 86, 0.16);
+  
+  --rpf-blue-1: #5fc4f5;
+  --rpf-blue-2: #3EA8DB;
+  --rpf-blue-3: #2e8fb8;
+  --rpf-blue-soft: rgba(62, 168, 219, 0.16);
+
+  /* Text colors for dark theme */
+  --vp-c-text-1: rgba(255, 255, 245, 0.92);
+  --vp-c-text-2: rgba(235, 235, 245, 0.72);
+  --vp-c-text-3: rgba(235, 235, 245, 0.52);
+}
+
+/**
+ * Dark Theme (Primary)
+ * -------------------------------------------------------------------------- */
+
+.dark {
+  /* Background colors */
+  --vp-c-bg: var(--rpf-bg);
+  --vp-c-bg-alt: var(--rpf-bg-lighter);
+  --vp-c-bg-elv: var(--rpf-bg-lighter-2);
+  --vp-c-bg-soft: var(--rpf-bg-soft);
+
+  /* Brand color - using green as primary */
+  --vp-c-brand-1: var(--rpf-green-1);
+  --vp-c-brand-2: var(--rpf-green-2);
+  --vp-c-brand-3: var(--rpf-green-3);
+  --vp-c-brand-soft: var(--rpf-green-soft);
+
+  /* Sidebar */
+  --vp-sidebar-bg-color: var(--rpf-bg-lighter);
+
+  /* Code blocks */
+  --vp-code-bg: var(--rpf-bg-lighter);
+  --vp-code-block-bg: var(--rpf-bg-lighter);
+}
+
+/**
+ * Light Theme
+ * -------------------------------------------------------------------------- */
+
+:root:not(.dark) {
+  /* Light background colors */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f6f6f7;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f6f6f7;
+
+  /* Brand colors (darker shades for light theme) */
+  --vp-c-brand-1: var(--rpf-green-3);
+  --vp-c-brand-2: var(--rpf-green-2);
+  --vp-c-brand-3: var(--rpf-green-1);
+  --vp-c-brand-soft: rgba(73, 201, 99, 0.14);
+
+  /* Text colors for light theme */
+  --vp-c-text-1: rgba(60, 60, 67);
+  --vp-c-text-2: rgba(60, 60, 67, 0.78);
+  --vp-c-text-3: rgba(60, 60, 67, 0.56);
+
+  /* Sidebar */
+  --vp-sidebar-bg-color: var(--vp-c-bg-alt);
+
+  /* Code blocks */
+  --vp-code-bg: #f6f6f7;
+  --vp-code-block-bg: #f6f6f7;
+}
+
+/**
+ * Component Colors
+ * -------------------------------------------------------------------------- */
+
+:root {
+  /* Default colors */
+  --vp-c-default-1: rgba(235, 235, 245, 0.72);
+  --vp-c-default-2: rgba(235, 235, 245, 0.52);
+  --vp-c-default-3: rgba(235, 235, 245, 0.32);
+  --vp-c-default-soft: rgba(235, 235, 245, 0.12);
+
+  /* Brand (green) */
+  --vp-c-brand-1: var(--rpf-green-1);
+  --vp-c-brand-2: var(--rpf-green-2);
+  --vp-c-brand-3: var(--rpf-green-3);
+  --vp-c-brand-soft: var(--rpf-green-soft);
+
+  /* Tip (blue) */
+  --vp-c-tip-1: var(--rpf-blue-1);
+  --vp-c-tip-2: var(--rpf-blue-2);
+  --vp-c-tip-3: var(--rpf-blue-3);
+  --vp-c-tip-soft: var(--rpf-blue-soft);
+
+  /* Warning (orange/yellow - generated from palette) */
+  --vp-c-warning-1: #ffb347;
+  --vp-c-warning-2: #ff9500;
+  --vp-c-warning-3: #e68600;
+  --vp-c-warning-soft: rgba(255, 149, 0, 0.16);
+
+  /* Danger (red) */
+  --vp-c-danger-1: var(--rpf-red-1);
+  --vp-c-danger-2: var(--rpf-red-2);
+  --vp-c-danger-3: var(--rpf-red-3);
+  --vp-c-danger-soft: var(--rpf-red-soft);
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-bg: var(--vp-c-brand-3);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: #ffffff;
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: #ffffff;
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
+
+/**
+ * Component: Home Hero
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    135deg,
+    var(--rpf-green-2) 20%,
+    var(--rpf-blue-2) 50%,
+    var(--rpf-red-2) 80%
+  );
+
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    var(--rpf-green-3) 25%,
+    var(--rpf-blue-3) 50%,
+    var(--rpf-red-3) 75%
+  );
+  --vp-home-hero-image-filter: blur(44px);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(68px);
+  }
+}
+
+/**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: var(--vp-c-text-1);
+  --vp-custom-block-tip-bg: var(--vp-c-tip-soft);
+  --vp-custom-block-tip-code-bg: var(--vp-c-tip-soft);
+}
+
+/**
+ * Custom Styles
+ * -------------------------------------------------------------------------- */
+
+/* Make the overall layout use our background */
+.dark .VPContent {
+  background-color: var(--rpf-bg);
+}
+
+/* Navbar background */
+.dark .VPNav {
+  background-color: var(--rpf-bg-lighter) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+:root:not(.dark) .VPNav {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid rgba(60, 60, 67, 0.12);
+}
+
+/* Link colors with accent colors */
+a {
+  color: var(--rpf-green-2);
+  transition: color 0.25s;
+}
+
+a:hover {
+  color: var(--rpf-green-1);
+}
+
+:root:not(.dark) a {
+  color: var(--rpf-green-3);
+}
+
+:root:not(.dark) a:hover {
+  color: var(--rpf-green-2);
+}
+
+/**
+ * Custom Components & Layouts
+ * -------------------------------------------------------------------------- */
+
+/* Examples grid layout */
+.examples-grid {
+  display: grid;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.examples-grid h3 {
+  color: var(--rpf-green-2);
+  margin-top: 0;
+}
+
+.examples-grid hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 2rem 0;
+}
+
+:root:not(.dark) .examples-grid hr {
+  border-top: 1px solid rgba(60, 60, 67, 0.12);
+}
+
+/* Feature cards with custom icons */
+.VPFeature.link:hover .icon {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.VPFeature .icon {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+/* Code block accent */
+.vp-code-group {
+  border: 1px solid rgba(73, 201, 99, 0.2);
+  border-radius: 8px;
+}
+
+/* Custom container colors */
+.vp-custom-block.tip {
+  border-color: var(--rpf-blue-2);
+}
+
+.vp-custom-block.warning {
+  border-color: #ff9500;
+}
+
+.vp-custom-block.danger {
+  border-color: var(--rpf-red-2);
+}
+
+/* Hero section improvements */
+.VPHero .name {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.VPHero .text {
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* Hero image (icon) styling - for RotatingIcons component in hero slot */
+.VPHero .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sidebar active item */
+.dark .VPSidebar .is-active > .link > .text {
+  color: var(--rpf-green-1);
+  font-weight: 600;
+}
+
+:root:not(.dark) .VPSidebar .is-active > .link > .text {
+  color: var(--rpf-green-3);
+  font-weight: 600;
+}
+
