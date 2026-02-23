@@ -46,7 +46,7 @@ Minecraft's resource pack system loads only the top-priority pack's model for ea
 ### RPF Delegation
 ```json
 {
-  "type": "rpf:select",
+  "type": "select",
   "property": "minecraft:custom_data",
   "cases": [
     {
@@ -54,7 +54,7 @@ Minecraft's resource pack system loads only the top-priority pack's model for ea
       "model": { "type": "minecraft:model", "model": "item/special_sword" }
     }
   ],
-  "delegate": true
+  "delegate": false
 }
 ```
 This model will show `special_sword` for items with `special_sword` NBT tag, and delegate to the next pack for all other items.
@@ -68,6 +68,18 @@ This model will show `special_sword` for items with `special_sword` NBT tag, and
   }
 }
 ```
+
+in `mypack/rpt/templates/weapon_template.json`:
+
+```json
+{
+  "model": {
+    "type": "model",
+    "model": "minecraft:stone"
+  }
+}
+```
+
 Reuse complex model configurations across multiple items with the template system.
 
 ## Getting Started

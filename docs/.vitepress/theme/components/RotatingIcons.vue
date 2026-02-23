@@ -10,7 +10,11 @@
         :style="getIconStyle(index)"
         :title="icon.title"
       >
-        <img :src="icon.src" :alt="icon.alt" />
+        <div class="icon-inner">
+          <div class="icon-scale">
+            <img :src="icon.src" :alt="icon.alt" />
+          </div>
+        </div>
       </a>
     </div>
   </div>
@@ -92,16 +96,30 @@ const getIconStyle = (index: number) => {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: float-icon 6s ease-in-out infinite;
-  animation-delay: var(--rotation-delay, 0s);
-  will-change: transform;
   cursor: pointer;
   text-decoration: none;
-  transition: transform 0.3s ease;
 }
 
-.icon-item:hover {
-  transform: scale(1.1);
+.icon-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: counter-rotate 20s linear infinite;
+}
+
+.icon-scale {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s ease;
+}
+
+.icon-item:hover .icon-scale {
+  transform: scale(1.2);
 }
 
 .icon-item img {
@@ -109,9 +127,11 @@ const getIconStyle = (index: number) => {
   height: 160px;
   object-fit: contain;
   filter: drop-shadow(0 0 25px rgba(73, 201, 99, 0.5));
-  transition: filter 0.3s ease;
-  animation: counter-rotate 20s linear infinite;
+  animation: tilt-wobble 4s ease-in-out infinite;
+  animation-delay: calc(var(--rotation-delay, 0s) * -2.5);
   pointer-events: none;
+  will-change: transform, filter;
+  transition: filter 0.4s ease;
 }
 
 .icon-item:hover img {
@@ -128,22 +148,6 @@ const getIconStyle = (index: number) => {
   }
 }
 
-/* Анимация качания отдельных иконок */
-@keyframes float-icon {
-  0%, 100% {
-    transform: translateY(0px) scale(1);
-  }
-  25% {
-    transform: translateY(-8px) scale(1.05);
-  }
-  50% {
-    transform: translateY(-12px) scale(1.08);
-  }
-  75% {
-    transform: translateY(-8px) scale(1.05);
-  }
-}
-
 /* Контр-вращение картинок, чтобы они оставались в правильной ориентации */
 @keyframes counter-rotate {
   0% {
@@ -151,6 +155,19 @@ const getIconStyle = (index: number) => {
   }
   100% {
     transform: rotate(-360deg);
+  }
+}
+
+/* Покачивание иконок влево-вправо (плавная синусоида) */
+@keyframes tilt-wobble {
+  0% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(-4deg);
   }
 }
 
