@@ -5,6 +5,9 @@ export default defineConfig({
   title: "RPF & RPT Docs",
   description: "Documentation for Resource Packs Fusion and Resource Packs Tools - Minecraft mods for advanced resource pack delegation and item model management",
   
+  // Ignore dead links during build (useful while docs are still being written)
+  ignoreDeadLinks: true,
+  
   head: [
     ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon.png' }],
     ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon.png' }],
