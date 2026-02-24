@@ -22,7 +22,7 @@
       <a href="https://modrinth.com/project/rp-twks" target="_blank" rel="noopener noreferrer" class="mod-card rpt">
         <div class="mod-header">
           <img :src="withBase('/icon2.png')" alt="RPT" />
-          <h3>RPT: Resource Packs Tools</h3>
+          <h3>RPT: Resource Packs Tweaks</h3>
         </div>
         <p>
           Adds powerful features like templates, variables, and conditional models, making it easier 
