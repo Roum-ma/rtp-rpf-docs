@@ -15,3 +15,5 @@
 
 ## How to Report a Bug
 In the world of software, there are situations when it doesn't behave as intended. If you happen to notice that RPF stopped working as it might have been intended, you can reach out in the [Issues](https://github.com/Danrus1100/rpf/issues) section of the project repository, or in the project's [Discord](https://discord.gg/Fkp9Tqmm6F), I will always try to help you or resolve the issue as quickly as possible!
+
+To help us resolve your issue, please provide game logs from the `.minecraft/logs` folder (in case of a crash). If you are reporting an item-related bug, please provide the export file generated via `/rpf debug export {item_id}`. Note that you need to enable debug mode first using `/rpf debug toggle`. It is **CRITICAL TO DISABLE** debug mode afterwards to prevent performance drops or visual glitches during regular play.
