@@ -54,11 +54,19 @@ In addition to vanilla rotations, you can define your own or modify certain sett
 }
 ```
 
-Note: If you specify a `type` in the entry above, the axis rotations will **NOT** be applied!
+::: info Note
+If you specify a `type` in the entry above, the axis rotations will **NOT** be applied!
+:::
 
 ---
 ### Simple Example:
-![rpt-demo-arm](https://i.postimg.cc/mgw33F3T/rpt-demo-arm.gif)
+<CodeMediaBlock 
+  mediaSrc="https://i.postimg.cc/mgw33F3T/rpt-demo-arm.gif" 
+  altText="rpt-demo-arm" 
+  :reverse="true" 
+  mediaWidth="40%" 
+  objectFit="cover"
+>
 
 ```json
 {
@@ -76,3 +84,4 @@ Note: If you specify a `type` in the entry above, the axis rotations will **NOT*
     }
 }
 ```
+</CodeMediaBlock>

@@ -10,6 +10,7 @@ import WhySimpleRu from './components/WhySimpleRu.vue'
 import ExamplesFlat from './components/ExamplesFlat.vue'
 import ExamplesSectionFlat from './components/ExamplesSectionFlat.vue'
 import ExamplesSectionFlatRu from './components/ExamplesSectionFlatRu.vue'
+import CodeMediaBlock from './components/CodeMediaBlock.vue'
 
 export default {
   extends: DefaultTheme,
@@ -26,5 +27,6 @@ export default {
     app.component('ExamplesFlat', ExamplesFlat)
     app.component('ExamplesSectionFlat', ExamplesSectionFlat)
     app.component('ExamplesSectionFlatRu', ExamplesSectionFlatRu)
+    app.component('CodeMediaBlock', CodeMediaBlock)
   }
 } satisfies Theme

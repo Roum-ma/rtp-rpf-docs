@@ -52,11 +52,20 @@
     }
 }
 ```
-если вы в записе выше укажете `type`, то вращения по осям **НЕ** будет применяться!
+::: info Примечание
+Eсли вы в записе выше укажете `type`, то вращения по осям **НЕ** будет применяться!
+:::
 
 ---
 ### Простой пример:
-![rpt-demo-arm](https://i.postimg.cc/mgw33F3T/rpt-demo-arm.gif)
+<CodeMediaBlock 
+  mediaSrc="https://i.postimg.cc/mgw33F3T/rpt-demo-arm.gif" 
+  altText="rpt-demo-arm" 
+  :reverse="true" 
+  mediaWidth="40%" 
+  objectFit="cover"
+>
+
 ```json
 {
     "model": {
@@ -73,4 +82,5 @@
     }
 }
 ```
+</CodeMediaBlock>
 
